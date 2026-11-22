@@ -1,0 +1,16 @@
+# asar 解包产物，不要提交
+_ion/
+_x/
+*.asar
+
+# 系统垃圾
+.DS_Store
+.chrome-profile/
+.tmpprof/
+
+# 中间产物
+row-*.png
+col-*.png
+_page-*.png
+*.pyc
+__pycache__/
