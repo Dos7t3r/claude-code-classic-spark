@@ -2,9 +2,24 @@
 
 **[中文](#中文) · [English](#english)**
 
-> **状态**：私有归档，但按「随时可以公开」的标准组织。
-> 公开前只需要删掉 `original/` `assets/` `frames/` `evidence/` —— 只留 `tools/` 和本文档，别人照样能从自己的安装包里一键重建。
-> **Status**: private archive, organised to be publishable. Delete the four asset folders and what's left is a clean reproduction toolkit.
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/claude-thinking.gif" width="120" alt="Claude classic spark thinking animation"><br>
+      <sub><b>经典星芒 · classic spark</b><br>9 帧 / 90ms · 2026 年 9 月之前</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/claude-new-think-dots.gif" width="120" alt="Claude current dots thinking animation"><br>
+      <sub><b>现在的散点 · current dots</b><br>110 帧 / 30fps · 替换它的那版</sub>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>左边是原来的「思考中」，右边是目前在跑的那版。两个动图都是从安装包里原样还原的，帧序和帧率与官方一致。</sub></p>
+
+> **这是公开归档。** 素材是 Anthropic 的美术作品，本仓为非官方归档 —— 详见 [NOTICE.md](NOTICE.md)。
+>
+> **想在自己的客户端里用？** 配套插件 **[dsh-spark-motion](https://github.com/Dos7t3r/dsh-spark-motion)** 可以在 DeepSeek Harness 的设置里一键切换这三套动画（原版 / 经典星芒 / 新版散点）；本仓的 `tools/` 也能把整包素材从你自己的安装包里重新生成。
 
 ---
 
@@ -42,6 +57,8 @@
 | 帧率 | 90ms/帧（`thinking`） | 33.33ms/帧（30fps） |
 | 渲染尺寸 | 20px | 20px |
 | 颜色 | `currentColor` | `var(--cds-clay)` = `#D97757` |
+
+另外三个动作也有动图：`assets/claude-writing.gif`、`assets/claude-waiting.gif`、`assets/claude-orbiting.gif`（星芒收束成旋转环的那版变体）。
 
 旧版 8 个状态的帧率：
 
@@ -107,6 +124,10 @@ node tools/rebuild.mjs ./_ion --dots ./original/cfdbc338b-DzLBZ8y5.webp
 ## English
 
 ### What this is
+
+The two animations above, side by side: the nine-frame spark that Claude Desktop used before late
+September 2026, and the 110-frame 30fps dot animation that replaced it. Both are reproduced from the
+shipped bundle at native frame order and timing.
 
 Late September / early October 2026, the **"thinking" indicator in the Claude Code tab of Claude Desktop** was replaced:
 
@@ -178,7 +199,7 @@ The GIF/WebP renders were produced with headless Chrome frame capture + Pillow; 
 - **The artwork is Anthropic's.** Extracting it for personal study/use is not the same as **publicly redistributing** it; keeping the assets in a public repo carries a DMCA takedown risk (modest, but real).
 - **Reverse engineering** may run against the Terms of Service. Not legal advice.
 - **Trademark**: unofficial archive, unaffiliated with Anthropic; "Claude" is used descriptively.
-- **Before publishing**: drop `original/`, `assets/`, `frames/`, `evidence/` and keep `tools/` + this README. What ships is then the method and the analysis, with assets generated locally by each user — the conventional clean approach for this kind of project.
+- **This repo currently ships the artwork** (it is a public archive). If you only want the method and the analysis, drop `original/`, `assets/`, `frames/`, `evidence/` and keep `tools/` + this README — each user then regenerates the assets from their own installation, the conventional clean approach for this kind of project.
 - No tokens, credentials, or personal data are included.
 
 ---
